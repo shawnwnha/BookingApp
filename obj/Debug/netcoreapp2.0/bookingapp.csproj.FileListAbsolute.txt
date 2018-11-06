@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\bin\Debug\netcoreapp2.0\bookingApp.deps.json
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\bin\Debug\netcoreapp2.0\bookingApp.runtimeconfig.json
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\bin\Debug\netcoreapp2.0\bookingApp.runtimeconfig.dev.json
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\bin\Debug\netcoreapp2.0\bookingApp.dll
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\bin\Debug\netcoreapp2.0\bookingApp.pdb
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\obj\Debug\netcoreapp2.0\bookingApp.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\obj\Debug\netcoreapp2.0\bookingApp.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\obj\Debug\netcoreapp2.0\bookingApp.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\obj\Debug\netcoreapp2.0\bookingApp.AssemblyInfo.cs
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\obj\Debug\netcoreapp2.0\bookingApp.dll
+C:\Users\User\Desktop\Working directory\CSharp Stack\bookingApp\obj\Debug\netcoreapp2.0\bookingApp.pdb

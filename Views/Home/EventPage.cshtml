@@ -1,0 +1,32 @@
+<h1>@ViewBag.thisEvent.Title</h1>
+<h2>Event Coordinator : @ViewBag.thisEvent.Eventer.Firstname</h2>
+<h3>Description: </h3>
+<p>@ViewBag.thisEvent.Description</p>
+<h3>Participants: </h3>
+<ul>
+    @foreach(var x in @ViewBag.thisEvent.Attenders){
+        <li>@x.User.Firstname</li>
+    }
+</ul>
+
+@{
+    if(@ViewBag.thisEvent.Eventer.UserId != @ViewBag.thisUser){
+        if(@ViewBag.thisEvent.Attenders.Count != 0){
+            var count = 0;
+            foreach(var y in @ViewBag.thisEvent.Attenders){
+                if(@y.UserId == @ViewBag.thisUser){
+                    count+=1;
+                }
+            }
+            if(count>0){
+                <td><a href="/leave/@ViewBag.thisEvent.EventId">Leave</a></td>
+            } 
+            else{
+                <a href="/join/@ViewBag.thisEvent.EventId">Join</a>
+            }
+        }
+        else{
+            <a href="/join/@ViewBag.thisEvent.EventId">Join</a>
+        }
+    }
+}

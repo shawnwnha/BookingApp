@@ -1,0 +1,28 @@
+@using bookingApp.Models
+@model EventValidator
+
+<div style="text-align: center;">
+    <h1>Plan Event!</h1>
+    <div style="color:red; font-size: 20px">@ViewBag.Error</div>
+    <div id="wrapper" style="display: inline-block;border: 1px solid black; text-align: center;">
+        <form method="POST" asp-controller="Home" asp-action="SubmitForm">
+            <span asp-validation-for="Title"style="color:red;"></span><br>
+            <label asp-for ="Title">Title: <input type="text" asp-for="Title"></label><br>
+            <span asp-validation-for="Description"style="color:red;"></span><br>
+            <label asp-for ="Description">Description: <input type="text" asp-for="Description"></label><br>
+            <span asp-validation-for="Date"style="color:red;"></span><br>
+            <label asp-for ="Date">Date: <input type="date" asp-for="Date"></label><br>  
+            <span asp-validation-for="Time"style="color:red;"></span><br>
+            <label asp-for ="Time">Time: <input type="time" asp-for="Time"></label><br>  
+            <span asp-validation-for="Duration"style="color:red;"></span><br>
+            <label asp-for ="Duration">Duration: <input type="text" asp-for="Duration"></label>
+            <span asp-validation-for="Duration2"style="color:red;"></span>
+            <select asp-for="Duration2">
+                <option value="days">Days</option>
+                <option value="hours">Hours</option>
+                <option value="minutes">Minutes</option>
+            </select><br>
+            <input type="submit" value="submit" style="background-color: white;">
+        </form>
+    </div><br>
+</div>  

@@ -1,0 +1,22 @@
+@using bookingApp.Models
+@model RegiValidator 
+<div>
+    <div style="text-align: center;">
+        <h1>REGISTRATION FORM</h1>
+        <div id="wrapper" style="display: inline-block;border: 1px solid black; text-align: center;">
+            <form method="POST" asp-controller="Home" asp-action="Register">
+                <span asp-validation-for="Firstname"style="color:red;"></span><br>
+                <label asp-for ="Firstname">First Name: <input type="text" asp-for="Firstname"></label><br>
+                <span asp-validation-for="Lastname"style="color:red;"></span><br>
+                <label asp-for ="Lastname">Last Name: <input type="text" asp-for="Lastname"></label><br>
+                <span asp-validation-for="Email"style="color:red;"></span><br>
+                <label asp-for ="Email">Email: <input type="email" asp-for="Email"></label><br>  
+                <span asp-validation-for="Password"style="color:red;"></span><br>
+                <label asp-for ="Password">Password: <input type="password" asp-for="Password"></label><br>
+                <span asp-validation-for="Confirm"style="color:red;"></span><br>
+                <label asp-for ="Confirm">Confirm: <input type="password" asp-for="Confirm"></label><br>
+                <input type="submit" value="submit" style="background-color: white;">
+            </form>
+        </div><br>
+    </div>    
+</div>

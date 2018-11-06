@@ -1,0 +1,47 @@
+<table>
+    <tr>
+        <th>Activity</th>
+        <th>Date and Time</th>
+        <th>Duration</th>
+        <th>Event by</th>
+        <th>Number of participants</th>
+        <th>Actions</th>    
+    </tr>
+    @foreach(var x in @ViewBag.events){
+        <tr>
+            <td><a href="/events/@x.EventId">@x.Title</a></td>
+            <td>@x.Datetime</td>
+            <td>@x.Duration</td>
+            <td>@x.Eventer.Firstname</td>
+            <td>@x.Attenders.Count</td>
+            @{
+                if(@x.UserId == @ViewBag.user){
+                    <td><a href="/events/@x.EventId/delete">Delete</a></td>
+                }
+                else{
+                    int count = 0;
+                    int jointId;
+                    if(@x.Attenders.Count !=0){
+                       foreach(var y in @x.Attenders){
+                           if(@y.UserId == @ViewBag.user){
+                               count+=1;
+                           }
+                       }
+                       if(count>0){
+                           <td><a href="/leave/@x.EventId">Leave</a></td>
+                       } 
+                       else{
+                        <td><a href="/join/@x.EventId">Join</a></td>
+                       }
+                    }
+                    else{
+                        <td><a href="/join/@x.EventId">Join</a></td>
+                    }
+                }
+            }
+        </tr>
+    }
+</table>
+
+
+<a href="/new">Add a Event!</a>

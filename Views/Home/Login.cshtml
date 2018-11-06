@@ -1,0 +1,14 @@
+@using bookingApp.Models 
+@model LoginValidator
+<div style="text-align: center;">
+    <h1>LOGIN</h1>
+    <div id="wrapper" style="display: inline-block;border: 1px solid black; width: 300px; height: 300px;">
+        <form method="POST" asp-controller="Home" asp-action="Login">
+            <span asp-validation-for="LoginId"style="color:red;"></span><br>
+            <label asp-for ="LoginId">Id: <input type="email" asp-for="LoginId"></label><br>
+            <span asp-validation-for="LoginPw"style="color:red;"></span><br>
+            <label asp-for ="LoginPw">Password: <input type="password" asp-for="LoginPw"></label><br>
+            <input type="submit" value="LOGIN" style="background-color: white;">
+        </form>
+    </div><br>
+</div>
